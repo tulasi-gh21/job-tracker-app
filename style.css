@@ -1,0 +1,19 @@
+ody {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+}
