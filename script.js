@@ -2,6 +2,7 @@ function addJob() {
 
     let company = document.getElementById("companyInput").value;
     let role = document.getElementById("roleInput").value;
+    let rounds = document.getElementById("roundsInput").value;
     let status = document.getElementById("statusInput").value;
 
     if (company === "" || role === "") {
@@ -12,15 +13,16 @@ function addJob() {
     let li = document.createElement("li");
 
     li.innerHTML =
-        company + " | " + role + " | " + status +
+        company + " | " + role + " | " + status + " | Rounds Done: " + rounds +
         ' <button onclick="deleteJob(this)">Delete</button>';
 
     document.getElementById("jobList").appendChild(li);
 
-    saveData();  // 🔥 VERY IMPORTANT
+    saveData();
 
     document.getElementById("companyInput").value = "";
     document.getElementById("roleInput").value = "";
+    document.getElementById("roundsInput").value = "";
 }
 
 
@@ -28,7 +30,7 @@ function addJob() {
 function deleteJob(button) {
     let li = button.parentElement;
     li.remove();
-    saveData();  // 🔥 VERY IMPORTANT
+    saveData();
 }
 
 
